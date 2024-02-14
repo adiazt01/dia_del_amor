@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
+import type { Code } from "astro:components";
 
 let date = new Date();
 let hours = date.getHours();
@@ -33,31 +34,27 @@ let messages = [
 
 <Layout title="Carta de mi lou">
   <main class="min-h-screen flex items-start flex-col justify-center">
-    <img
-      class="w-64 h-64 object object-cover p-1 rounded-full ring-2 ring-rose-300 dark:ring-rose-500"
-      src="img/profile.jpg"
-      alt="Bordered avatar"
-    />
     <header class="text-white gap-8 flex items-center flex-col py-8">
       <div>
-        <div class="flex flex-col justify-center items-start">
-          <h1 class="text-4xl font-semibold text-start">{greeting}</h1>
-          <span
-            class="bg-red-100 mt-2 text-rose-800 text-sm font-medium me-2 px-6 py-0.5 rounded dark:bg-rose-900 dark:text-rose-300"
-            >Enamorado 🤍</span
-          >
+        <div class="flex flex-col gap-4 justify-center items-start">
+          <Title title=`${greeting}` />
         </div>
-        <p class="text-lg mt-2 text-start text-zinc-300">
-          Pasándote por aquí para recordar cuanto te amo o siendo tu primera
-          vez?
+        <p class="text-lg font-semibold mt-4 text-start text-zinc-300">
+          Sorprendida por esta "carta"? No te preocupes, no es una carta de
+          despedida, ni mucho menos, es una carta de amor, una carta que quiero
+          dedicarte en este día tan especial.
         </p>
-        <p class="text-lg mt-4 text-start text-zinc-300">
-          Independientemente de ello hoy es un día en el que quiero decirte
-          cuánto te amo. Pero antes de ello, te has preguntado <br /><span
-            class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-400 to-rose-500"
-            >¿Por qué te amo?</span
-          >
+
+        <p class="text-lg font-semibold mt-4 text-start text-zinc-300">
+          Jugaremos algo antes de continuar, a lo largo de este mes te ire dejando pistas en esta pagina, puede que cambie una pequeña letra o alguna foto, algo te dirá esos cambios, para que?, por ahora no te preocupes por ellas, solo disfruta de las palabras que te tengo solo para ti amor de mi vida para el dia de hoy.
         </p>
+
+        <p class="text-lg font-semibold mt-4 text-start text-zinc-300">
+          Y es que hoy es un dia especial, un dia en el que quiero recordarte
+          una vez mas cuanto te amo, cuanto te extraño, cuanto te necesito, y
+          cuanto te quiero a mi lado.
+        </p>
+      
       </div>
     </header>
   </main>
